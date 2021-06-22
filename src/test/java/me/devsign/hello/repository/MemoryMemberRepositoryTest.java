@@ -2,11 +2,9 @@ package me.devsign.hello.repository;
 
 import me.devsign.hello.domain.Member;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.*;
@@ -28,8 +26,9 @@ class MemoryMemberRepositoryTest {
         repository.save(member);
         Member result = repository.findById(member.getId()).get();
 
-        Assertions.assertEquals(member, result);
-
+        // member 변수와 result 값이 동일한지 비교 테스트
+        // Assertions.assertEquals(member, result);
+        // member 변수를 기준으로 잡고 비교하는 테스트
         assertThat(member).isEqualTo(result);
 
     }
