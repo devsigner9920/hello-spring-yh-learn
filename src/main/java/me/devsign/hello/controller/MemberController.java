@@ -1,5 +1,7 @@
 package me.devsign.hello.controller;
 
+import me.devsign.hello.service.MemberService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 // Controller Annotation : 스프링 컨테이너에 annotation이 사용된 컨트롤러 객체를 담아둔다.
@@ -8,4 +10,11 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class MemberController {
 
+
+    private final MemberService memberService;
+
+    @Autowired
+    public MemberController(MemberService memberService) {
+        this.memberService = memberService;
+    }
 }
