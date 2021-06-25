@@ -11,9 +11,9 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class MemberController {
 
-
-    private final MemberService memberService;
-
+    private MemberService memberService;
+    // DI에는 필드 주입, setter 주입, 생성자 주입 이렇게 3가지 방법이 있다. 의존관계가 실행중에
+    // 동적으로 변하는 경우는 거의 없으므로 생성자 주입을 권장한다.
     @Autowired
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
