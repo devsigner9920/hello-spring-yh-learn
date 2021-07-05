@@ -6,8 +6,4 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest(classes = HelloSpringYhLearnApplication.class)
 class HelloSpringYhLearnApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
-
 }
