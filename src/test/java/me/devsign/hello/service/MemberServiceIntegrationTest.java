@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Commit;
 import org.springframework.transaction.annotation.Transactional;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -21,10 +22,11 @@ class MemberServiceIntegrationTest {
     MemberService memberService;
 
     @Test
+    @Commit
     void normalCaseJoin() {
         // given : 어떤 데이터를 기반으로 하는지 작성
         Member member = new Member();
-        member.setName("hello");
+        member.setName("amazing jpa1");
 
         // when : 어떤 것을 대상으로 검증할지 작성
         Long saveId = memberService.join(member);

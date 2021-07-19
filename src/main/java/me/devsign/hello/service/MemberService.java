@@ -5,11 +5,13 @@ import me.devsign.hello.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
 // Service는 비즈니스에 의존적으로 설계하는 것을 지향한다.
 // 비즈니스 로직에 적절하게 메소드 네이밍한다.
+@Transactional
 public class MemberService {
     private final MemberRepository memberRepository;
 
