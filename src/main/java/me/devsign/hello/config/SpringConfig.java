@@ -15,7 +15,7 @@ import javax.sql.DataSource;
 // 아래와 같은 코드를 개방 폐쇄 원칙(OCP, Open-Closed Principle)이 잘 지켜지고 있다고 할 수 있는 코드다.
 @Configuration
 public class SpringConfig {
-    //private DataSource dataSource;
+    private DataSource dataSource;
     //private EntityManager em;
     private final MemberRepository memberRepository;
 
